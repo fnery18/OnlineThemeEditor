@@ -28,6 +28,12 @@ namespace OnlineThemeEditor.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult RenderizarCores(List<string> cores)
+        {
+            return PartialView("_coresPartial", cores);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
