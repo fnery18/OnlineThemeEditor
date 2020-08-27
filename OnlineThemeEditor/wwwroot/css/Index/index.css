@@ -1,0 +1,12 @@
+﻿#txt-css {
+    width: 100%;
+    height: 300px;
+    outline: none;
+    resize: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#txt-css:focus{
+    border: 1px solid rgba(0,0,0,0.3);
+}
