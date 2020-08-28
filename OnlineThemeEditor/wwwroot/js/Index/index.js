@@ -2,10 +2,20 @@
     $(document).on('click', '.icone-processar', function () {
         $(this).addClass('fa-spin');
 
-        setTimeout(function () {
-            processarCSS();
+        if ($('#txt-css').val().length) {
+            setTimeout(function () {
+                processarCSS();
+                $('.icone-processar').removeClass('fa-spin');
+            }, 1500)
+        }
+        else {
             $('.icone-processar').removeClass('fa-spin');
-        }, 1500)
+        }
+    });
+
+    $(document).on('click', '.box-cor', function () {
+
+        $('#modal-colorPicker').modal();
     });
 
     const processarCSS = function () {
@@ -22,6 +32,7 @@
         $.post('/Home/RenderizarCores', {cores}, function (partial) {
             if (partial) {
                 $('#cores').html(partial);
+                $('#cores').fadeIn(500);
             }
         })
     }

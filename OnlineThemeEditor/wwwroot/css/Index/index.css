@@ -1,10 +1,17 @@
-﻿#txt-css {
+﻿body {
+background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+}
+
+#txt-css {
     width: 100%;
     height: 300px;
     outline: none;
     resize: none;
     padding: 20px;
     border: 1px solid #ccc;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
 }
 
 #txt-css:focus{
@@ -23,12 +30,13 @@
     cursor: pointer;
 }
 
-.box-cor{
+.box-cor {
     width: 100px;
     height: 100px;
-    border: 1px solid #000;
+    border-radius: 5px;
     text-align: center;
     margin: 10px;
+    box-shadow: 2px 1px 5px rgba(0,0,0,.5);
 }
 
 .box-cor:hover{
@@ -37,9 +45,12 @@
 
 #cores {
     display: inline-flex;
-    padding: 20px;
     border: 1px solid rgba(0,0,0,0.2);
     width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-bottom: 10px;
 }
 
 .texto-cor {
@@ -51,3 +62,49 @@
     text-shadow: 2px 2px #000;
     color: #fff;
 }
+
+/* Float Shadow */
+.hvr-float-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+    .hvr-float-shadow:before {
+        pointer-events: none;
+        position: absolute;
+        z-index: -1;
+        content: '';
+        top: 100%;
+        left: 5%;
+        height: 10px;
+        width: 90%;
+        opacity: 0;
+        background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+        background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+        /* W3C */
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform, opacity;
+        transition-property: transform, opacity;
+    }
+
+    .hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+        /* move the element up by 5px */
+    }
+
+        .hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+            opacity: 1;
+            -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+            /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+        }

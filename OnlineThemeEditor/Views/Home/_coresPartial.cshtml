@@ -1,8 +1,12 @@
 ﻿@model List<string>
 
-@foreach (var cor in Model)
-{
-    <div class="box-cor" style="background-color: @cor">
-        <span class="texto-cor">@cor</span>
+    <div class="row">
+
+
+        @foreach (var cor in Model)
+        {
+            <div class="box-cor hvr-float-shadow" style="background-color: @cor">
+                <span class="texto-cor">@cor</span>
+            </div>
+        }
     </div>
-}
