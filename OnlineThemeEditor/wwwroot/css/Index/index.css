@@ -12,9 +12,14 @@ background-color: #D9AFD9;
     border: 1px solid #ccc;
     background-color: rgba(0,0,0,0.3);
     color: #fff;
+    transition: all .5s;
 }
 
-#txt-css:focus{
+#txt-cores-encontradas{
+    float: right;
+}
+
+#txt-css:focus {
     border: 1px solid rgba(0,0,0,0.3);
 }
 
