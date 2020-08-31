@@ -1,10 +1,10 @@
 ﻿@model List<string>
 
 <div class="row">
-    <input type="hidden" id="hidden-cores" value="@Model.Count"/>
+    <input type="hidden" id="hidden-cores" value="@Model.Count" />
     @foreach (var cor in Model)
     {
-        <div class="box-cor hvr-float-shadow" style="background-color: @cor">
+        <div class="box-cor hvr-float-shadow" style="background-color: @cor" data-cor="@cor">
             <span class="texto-cor">
                 @if (cor.Length <= 8)
                 {
