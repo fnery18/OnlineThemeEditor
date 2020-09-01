@@ -2,7 +2,7 @@
 # OnlineThemeEditor 
 > Edite facilmente as cores presente no seu código css
 
-![](../OnlineThemeEditor/wwwroot/images/screenshot.png")
+![Alt text](/OnlineThemeEditor/wwwroot/images/screenshot.png?raw=true "OnlineThemeEditor")
 
 ## Tecnologias
 > .NET Core 3.1
